@@ -3,6 +3,7 @@ var text = "Hi, i am Hariharan";
 var index = 0;
 
 // Typewriting effect
+while(true){
 var typeWriter = setInterval(function() {
 	document.querySelector("h1").textContent += text[index];
 
@@ -12,7 +13,7 @@ var typeWriter = setInterval(function() {
 		clearInterval(typeWriter);
 	}
 
-}, 400);
+}, 400);}
 //   trywritting end
 
 $(document).ready(function(){
