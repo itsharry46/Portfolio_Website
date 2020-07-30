@@ -167,6 +167,7 @@
 				</div>
 			</div>
 
+			<form method="POST" autocomplete="off" name="google-sheet">
 			<div   id="contact">
 				<div class="container">
 					<h1 class="text-center" data-aos="zoom-in" style="margin-left: 0%;">Connect To Me</h1>
@@ -175,12 +176,30 @@
 							<p class="text-justify" style="margin-left: 0%;margin-top: 7%;">Feel free to talk to me about anything that bothers you. If you need a helping hand, please don't hesitate to contact me. Got a question on my skills? I am just a click away.<br><br></p>
 						</div>
 						<div class="col-md-6">
-							<h4 class="text-center" data-aos="fade" style="margin-bottom: 10%;">Say Hi To Me</h4><input class="border rounded shadow-sm" type="text" style="/*filter: blur(0px);*/margin-left: 3%;width: 195px;" required="" placeholder="Name"><input class="border rounded shadow-sm" type="email" required="" style="margin-left: 3%;width: 195px;"
-							placeholder="E-Mail"><input class="border rounded shadow-sm" type="text" style="margin-top: 4%;/*size: 100;*//*margin-right: 0%;*/margin-left: 3%;width: 90%;" placeholder="Subject" required=""><textarea class="border rounded shadow-sm"
-							style="margin-top: 4%;margin-left: 3%;resize: none;width: 90%;height: 100px;" required="" wrap="hard" placeholder="Message"></textarea><button class="btn btn-primary" data-bs-hover-animate="flash" type="button" style="margin-top: 2%;margin-left: 40%;background-color: rgb(59,192,247);">&nbsp;<strong>Submit&nbsp;</strong></button></div>
+							<h4 class="text-center" data-aos="fade" style="margin-bottom: 10%;">Say Hi To Me</h4>
+							<input class="border rounded shadow-sm" type="text" style="/*filter: blur(0px);*/margin-left: 3%;width: 195px;" placeholder="Name" name="Name">
+							<input class="border rounded shadow-sm" type="email" style="margin-left: 3%;width: 195px;"placeholder="E-Mail" name="E-mail">
+							<input class="border rounded shadow-sm" type="text" style="margin-top: 4%;/*size: 100;*//*margin-right: 0%;*/margin-left: 3%;width: 90%;" placeholder="Subject" name="Sub">
+							<textarea class="border rounded shadow-sm"
+							style="margin-top: 4%;margin-left: 3%;resize: none;width: 90%;height: 100px;" wrap="hard" placeholder="Message" name="Message"></textarea>
+							<button class="btn btn-primary" name="submit" data-bs-hover-animate="flash" type="submit" style="margin-top: 2%;margin-left: 40%;background-color: rgb(59,192,247);">&nbsp;<strong>Submit&nbsp;</strong></button>
+						</div>
 						</div>
 					</div>
 				</div>
+			</form>
+
+				<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwaK-FlMQ_ah5eiR-HE1pdDqKykFG6ciE1RSvGnN0fGwBd6k0fP/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 				<div class="text-white bg-dark shadow footer-basic" style="margin-top: 10%;">
 					<footer>
 						<div class="social">
