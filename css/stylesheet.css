@@ -18,6 +18,7 @@
 	z-index: 99999;
 }
 
+
  .contact-clean {
  	background: #f1f7fc;
  	padding: 80px 0;
@@ -718,6 +719,7 @@
  	margin-left: 740px;
  	margin-top: -59px;
  }
+
 .btn-shine
 {
   color: #ffffff;
@@ -734,15 +736,10 @@
   0%{
     background-position: 0;}
   60%{
-    background-position: 620px;}
+    background-position: 650px;}
   100%{
-    background-position: 620px;}
+    background-position: 650px;}
 }
-
-
-
-
-
 
 
 
@@ -752,6 +749,17 @@
 
  @media only screen and (max-width: 600px) 
  {
+ 	@keyframes shine
+{
+  0%{
+    background-position: 0;}
+  60%{
+    background-position: 400px;}
+  100%{
+    background-position: 400px;}
+}
+
+
  	.rounded-circle 
  	{
  		margin-top: -800px;
