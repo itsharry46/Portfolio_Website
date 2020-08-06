@@ -43,28 +43,7 @@ var typeWrite = function(el, toRotate, period, delay = 1000, loop = 'true') {
       }, that.interval);
 };
 
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-set'),
-                period = elements[i].getAttribute('data-period'),
-                delay = elements[i].getAttribute('data-delay'),
-                loop = elements[i].getAttribute('data-loop');
-                //optional data
-                delay = (!delay) ? '1000' : delay;
-                loop = (!loop) ? 'true' : loop;
-            if (toRotate) {
-              new typeWrite(elements[i], JSON.parse(toRotate), period, delay, loop);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > span { border-right: 1px solid #fff}";
-        css.innerHTML += ' @keyframes typewrite { from{border-right-color: black;} to{border-right-color: transparent;}}';
-        css.innerHTML += ' .typewrite > span {animation-name: typewrite; animation-duration: 1s; animation-iteration-count: infinite;}';
-        document.body.appendChild(css);
-    };
+
 // end of loop
 
 
