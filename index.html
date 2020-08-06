@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<link rel="icon" href="https://i.imgur.com/Iyw3bM6.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 	<title>Portfolio</title>
@@ -19,6 +20,8 @@
 </head>
 
 <body style="overflow-x:hidden;">
+	<!-- preloader -->
+	<div id="preloading"></div>
 	<nav  class="navbar navbar-light navbar-expand text-capitalize shadow-lg">
 		<div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navcol-1"><img class="pulse animated infinite" src="https://i.imgur.com/nHh0kkT.png" width="100" loading="eager">
@@ -34,7 +37,6 @@
 			</div>
 		</div>
 	</nav>
-
 	<div id="particles-js"></div>
 	<div>
 		<h1 data-bs-hover-animate="flash" style=" opacity: 1;color: rgb(255,255,255);">Hi, i am Hariharan</h1>
@@ -200,6 +202,8 @@
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
+
+
 				<div class="text-white bg-dark shadow footer-basic" style="margin-top: 10%;">
 					<footer>
 						<div class="social">
@@ -211,13 +215,21 @@
 							<li class="list-inline-item"><a href="#exp">Experience</a></li>
 							<li class="list-inline-item"><a href="#contact">Contact</a></li>
 						</ul>
-						<p target="_blank" class="btn-shine text-center shine copyright">Copyright © 2020 Hariharn Achary</p>
+						<p target="_blank" class="btn-shine text-center copyright">Copyright © 2020 Hariharn Achary</p>
 					</footer>
 				</div>
 				<script src="js/jquery.min.js"></script>
 				<script src="js/bootstrap.min.js"></script>
 				<script src="js/bs-init.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+				<script>
+					window.onload = function () 
+					{
+						var preloading1 = document.getElementById('preloading');
+						preloading1.style.display = 'none';
+					}
+				</script>
+
 			</body>
 
 			</html>
