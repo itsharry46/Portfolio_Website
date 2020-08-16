@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link rel="icon" href="https://i.imgur.com/Iyw3bM6.png">	
+	<!-- <link rel="icon" href="https://i.imgur.com/Iyw3bM6.png"> -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 	<title>Portfolio</title>
@@ -153,34 +153,48 @@
 					</article>
 				</section>
 
+<h1 class="text-center" data-aos="zoom-in" style="margin: 12% 0 5% 0;">Achievements</h1>
+<div style="margin-bottom: 15%;">
+				<main class="page-content">
+  <div class="card">
+    <div class="content">
+      <h2 class="copy">Project</h2>
+      <p class="copy">Worked on total 8 projects. In which 2 live projects and 5 normal projects</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="copy">Prize</h2>
+      <p class="copy">1st price at Code-Hunt.<br>2nd prize at Project Development.<br></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="copy">Certifications</h2>
+      <p class="copy">50+ certifications in various field also having basic knowledge on it.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="copy">Internship</h2>
+      <p class="copy">3 Internship which good knowledge on Web Development and Python</p>
+    </div>
+  </div>
+</main>
+</div>
 
-				<div id="jb_back" 
-				data-bs-parallax-bg="true" style="background-image: url('https://i.imgur.com/CRzu8qv.jpg');background-position: center;background-size: cover;">
-				<div class="container" style="padding-top: 45px;">
-					<img id="bulb" data-bs-hover-animate="flash" src="https://i.imgur.com/XnKN0Qe.png" width="150" height="150" style="filter: invert(100%);">
-					<img id="trophy" data-bs-hover-animate="flash" style="filter: invert(100%);" src="https://i.imgur.com/Z9Ue2jm.png"
-					width="150" height="150">
-					<img id="cer" data-bs-hover-animate="flash" src="https://i.imgur.com/8fkNblT.png" width="150" height="150" style="filter: invert(100%);">
-					<img id="intern" data-bs-hover-animate="flash" style="margin-left: 10%;filter: invert(100%);" src="https://i.imgur.com/EwgW4d4.png"
-					width="150" height="150">
-					<p id="bulbp" style="color: rgb(255,255,255);font-size: 29px;"><strong>8 Projects</strong></p>
-					<p id="trophyp" style="color: rgb(255,255,255);font-size: 29px;"><strong>3 Prizes</strong></p>
-					<p id="cerp" style="color: rgb(255,255,255);font-size: 29px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50+<br> Certifications</strong></p>
-					<p id="internp" style="color: rgb(255,255,255);font-size: 29px;"><strong>3 Internships</strong></p>
-				</div>
-			</div>
 			<form method="POST" autocomplete="off" name="google-sheet">
 			<div   id="contact">
 				<div class="container">
-					<h1 class="text-center" data-aos="zoom-in" style="margin-left: 0%;">Connect To Me</h1>
+					<h1 class="text-center" data-aos="zoom-in" style="margin-left: 0%; margin-top: -18%;">Connect To Me</h1>
 					<div class="row" style="margin-top: 7%;">
 						<div class="col-md-6"><img class="bg-secondary border rounded-circle shadow" data-bs-hover-animate="pulse" src="https://i.imgur.com/HZGbHFc.png" width="170px" style="margin-left: 32%;margin-top: 0px;">
 							<p class="text-justify" style="margin-left: 0%;margin-top: 7%;">Feel free to talk to me about anything that bothers you. If you need a helping hand, please don't hesitate to contact me. Got a question on my skills? I am just a click away.<br><br></p>
 						</div>
 						<div class="col-md-6">
 							<h4 class="text-center" data-aos="fade" style="margin-bottom: 10%;">Say Hi To Me</h4>
-							<input class="border rounded shadow-sm" type="text" style="/*filter: blur(0px);*/margin-left: 3%;width: 195px;" placeholder="Name" name="Name">
-							<input class="border rounded shadow-sm" type="email" style="margin-left: 3%;width: 195px;"placeholder="E-Mail" name="E-mail">
+							<input class="border rounded shadow-sm" type="text" style="/*filter: blur(0px);*/margin-left: 3%;width: 90%;" placeholder="Name" name="Name">
+							<input class="border rounded shadow-sm" type="email" style="margin-left: 3%;width: 90%; margin-top: 4%;"placeholder="E-Mail" name="E-mail">
 							<input class="border rounded shadow-sm" type="text" style="margin-top: 4%;/*size: 100;*//*margin-right: 0%;*/margin-left: 3%;width: 90%;" placeholder="Subject" name="Sub">
 							<textarea class="border rounded shadow-sm"
 							style="margin-top: 4%;margin-left: 3%;resize: none;width: 90%;height: 100px;" wrap="hard" placeholder="Message" name="Message"></textarea>
@@ -227,6 +241,7 @@
 		    window.onload = function() {
         var pre = document.getElementById('preloading');
         pre.style.display = 'none';
+        
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-set'),
