@@ -21,7 +21,24 @@
 
 <body style="overflow-x:hidden;">
 	<!-- preloader -->
-	
+	<div id="preloading"></div>
+	<nav  class="navbar navbar-light navbar-expand text-capitalize shadow-lg">
+		<div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navcol-1"><img class="pulse animated infinite" src="https://i.imgur.com/nHh0kkT.png" width="100" loading="eager">
+				<ul class="nav navbar-nav text-left d-xl-flex mx-auto">
+					<li class="nav-item" role="presentation"><a class="nav-link active text-info" data-bs-hover-animate="jello" href="index.html">Home</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link text-info" data-bs-hover-animate="jello" href="#about">About Me</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link text-info" data-bs-hover-animate="jello" href="#skills">Skills</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link text-info" data-bs-hover-animate="jello" href="#exp">Experience</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link text-info" data-bs-hover-animate="jello" href="#contact">Contact</a></li>
+					<li class="nav-item" role="presentation"></li>
+					<li class="nav-item" role="presentation"></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="particles-js"></div>
 	<div>
 		<h1 data-bs-hover-animate="flash" style=" opacity: 1;color: rgb(255,255,255);">Hi, i am Hariharan</h1>
 		<p style="color: rgb(255,255,255);">Known as <span class="typewrite" data-period='100' data-set='["Full Stack Web Developer.", "Python Developer.", "UX Designer.", "Gamer."]' data-delay='1000' data-loop='true'>
@@ -197,10 +214,12 @@
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("Happy To Connect With You!!!!!"))
                 .catch(error => console.error('Error!', error.message))
-		var frm = document.getElementsByName('google-sheet')[0];
-            	frm.reset(); 
-            	return false;
+
+                var frm = document.getElementsByName('google-sheet')[0];
+            frm.reset();
+            return false;
             })
+
           </script>
 
 
